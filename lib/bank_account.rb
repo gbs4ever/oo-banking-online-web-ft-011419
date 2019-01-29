@@ -14,11 +14,15 @@ attr_reader :name
           "Your balance is $#{@balance}."
       end
       def valid?
-      if @status == "open" and  @balance > 0
-        true
-      else
-        false
+        if @status == "open" and  @balance > 0
+          true
+        else
+          false
+        end
       end
+      def close_account
+        
+        
       end
 
 
