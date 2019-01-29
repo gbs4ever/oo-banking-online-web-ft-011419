@@ -22,6 +22,7 @@ def execute_transaction
     @sender.deposit (-@amount)
     @status = "complete" @sender.valid? == false
   end
+  end
 end
 
   # your code here
