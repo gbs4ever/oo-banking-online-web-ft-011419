@@ -21,7 +21,7 @@ def execute_transaction
       @receiver.deposit(@amount)
       @sender.deposit (-@amount)
       @status = "complete" @sender.valid? == false
-  end
+    end
   end
 end
 
