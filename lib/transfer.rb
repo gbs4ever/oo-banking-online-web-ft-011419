@@ -18,9 +18,11 @@ def execute_transaction
     if @status   ==  "pending"
       @receiver.deposit(@amount)
       @sender.deposit (-@amount)
-      @status = "complete" @sender.valid? == false
+      @status = "complete"
     end
-
+    else
+        @status = "rejected"
+        "Transaction rejected. Please check your account balance."
   end
 end
 
