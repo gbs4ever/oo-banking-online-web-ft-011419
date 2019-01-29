@@ -9,6 +9,7 @@ attr_reader :name
 
       def deposit(amount)
         @balance +=  amount
+          @status = "open"
       end
       def display_balance
           "Your balance is $#{@balance}."
