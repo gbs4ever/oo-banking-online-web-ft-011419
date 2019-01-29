@@ -9,16 +9,20 @@ attr_reader :name
 
       def deposit(amount)
         @balance +=  amount
+          @status = "open"
       end
       def display_balance
           "Your balance is $#{@balance}."
       end
       def valid?
-      if @status == "open" and  @balance > 0
-        true
-      else
-        false
+        if @status == "open" and  @balance > 0
+          true
+        else
+          false
+        end
       end
+      def close_account
+          @status = "closed"
       end
 
 
