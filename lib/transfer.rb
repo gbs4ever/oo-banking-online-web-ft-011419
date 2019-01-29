@@ -15,7 +15,8 @@ attr_reader :amount
 
 def execute_transaction
   if @sender.valid? == false
-
+    return"Transaction rejected. Please check your account balance."
+  else
   if @status   ==  "pending"
     @receiver.deposit(@amount)
     @sender.deposit (-@amount)
