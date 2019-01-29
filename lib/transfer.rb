@@ -14,10 +14,11 @@ attr_reader :amount
   end
 
 def execute_transaction
+  
   if @status   ==  "pending"
     @receiver.deposit(@amount)
     @sender.deposit (-@amount)
-    @status = "complete"
+    @status = "complete"unless @sender.valid? == false
   end
 end
 
